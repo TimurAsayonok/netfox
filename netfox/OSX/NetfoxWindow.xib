@@ -38,10 +38,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="800" height="400"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <splitView dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMW-gH-1cu" userLabel="Split View - Requests List and Details">
+                    <splitView appearanceType="aqua" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMW-gH-1cu" userLabel="Split View - Requests List and Details">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="400"/>
                         <subviews>
-                            <customView id="KBu-Ny-MmK" userLabel="View - List">
+                            <customView appearanceType="aqua" id="KBu-Ny-MmK" userLabel="View - List">
                                 <rect key="frame" x="0.0" y="0.0" width="262" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
@@ -168,16 +168,16 @@
                                     <constraint firstItem="N8i-fW-UjS" firstAttribute="top" secondItem="Xgn-y3-Pre" secondAttribute="bottom" id="u2a-OY-Owf"/>
                                 </constraints>
                             </customView>
-                            <customView id="1TF-80-6Mk" userLabel="View - Details">
+                            <customView appearanceType="aqua" id="1TF-80-6Mk" userLabel="View - Details">
                                 <rect key="frame" x="272" y="0.0" width="528" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <tabView translatesAutoresizingMaskIntoConstraints="NO" id="ziP-2f-nd4">
+                                    <tabView appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="ziP-2f-nd4">
                                         <rect key="frame" x="3" y="0.0" width="522" height="396"/>
                                         <font key="font" metaFont="system"/>
                                         <tabViewItems>
                                             <tabViewItem label="Info" identifier="1" id="oKu-28-CZg">
-                                                <view key="view" id="5nS-P0-U5H">
+                                                <view key="view" appearanceType="aqua" id="5nS-P0-U5H">
                                                     <rect key="frame" x="10" y="33" width="502" height="350"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
@@ -193,7 +193,7 @@
                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         <size key="minSize" width="480" height="328"/>
-                                                                        <size key="maxSize" width="482" height="10000000"/>
+                                                                        <size key="maxSize" width="500" height="10000000"/>
                                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     </textView>
                                                                 </subviews>
@@ -429,7 +429,7 @@
                 <outlet property="contentViewController" destination="nry-se-EGu" id="tBz-fk-55E"/>
             </connections>
         </popover>
-        <customView id="Aqt-OX-2RN" userLabel="View - Settings">
+        <customView appearanceType="aqua" id="Aqt-OX-2RN" userLabel="View - Settings">
             <rect key="frame" x="0.0" y="0.0" width="247" height="317"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -568,7 +568,7 @@
                 <outlet property="contentViewController" destination="CXf-9K-qWP" id="9EX-tm-4MW"/>
             </connections>
         </popover>
-        <customView id="3zB-N6-XRF" userLabel="View - Info">
+        <customView appearanceType="aqua" id="3zB-N6-XRF" userLabel="View - Info">
             <rect key="frame" x="0.0" y="0.0" width="290" height="314"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -622,7 +622,7 @@
             </constraints>
             <point key="canvasLocation" x="460" y="-104.5"/>
         </customView>
-        <customView id="o2t-Bo-0qK" userLabel="View - Statistics">
+        <customView appearanceType="aqua" id="o2t-Bo-0qK" userLabel="View - Statistics">
             <rect key="frame" x="0.0" y="0.0" width="290" height="314"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -638,7 +638,7 @@
                     <rect key="frame" x="20" y="20" width="250" height="250"/>
                     <clipView key="contentView" drawsBackground="NO" id="KhA-eS-wlq">
                         <rect key="frame" x="1" y="1" width="248" height="248"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="x6g-1e-icD" userLabel="Text View - Statistics">
                                 <rect key="frame" x="0.0" y="0.0" width="248" height="248"/>
