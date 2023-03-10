@@ -68,7 +68,11 @@ class NFXSettingsController_OSX: NFXSettingsController, NSTableViewDataSource, N
     
     // MARK: Table View Delegate and DataSource
     
-    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+//    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+//        return tableData.count
+//    }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
         return tableData.count
     }
     
