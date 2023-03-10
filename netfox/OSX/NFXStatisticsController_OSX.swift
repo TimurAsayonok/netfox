@@ -10,7 +10,6 @@
 import Cocoa
     
 class NFXStatisticsController_OSX: NFXStatisticsController {
- 
     @IBOutlet private var textView: NSTextView!
 
     override func reloadData() {

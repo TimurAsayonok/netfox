@@ -23,10 +23,10 @@ class NFXListController_OSX: NFXListController, NSTableViewDelegate, NSTableView
     // MARK: View Life Cycle
 
     override func awakeFromNib() {
-        let nibName = cellIdentifier
-
-        tableView.register(NSNib(nibNamed: nibName, bundle: nil),
-                           forIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier))
+//        tableView.register(
+//            NFXListCell_OSX.nib(),
+//            forIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier)
+//        )
 
         searchField.delegate = self
         
@@ -42,6 +42,10 @@ class NFXListController_OSX: NFXListController, NSTableViewDelegate, NSTableView
     // MARK: UITableViewDataSource
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        0
+    }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
         tableData.count
     }
     
@@ -55,6 +59,11 @@ class NFXListController_OSX: NFXListController, NSTableViewDelegate, NSTableView
         
         return cell
     }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        nil
+    }
+    
     
     // MARK: NSTableViewDelegate
 

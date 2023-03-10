@@ -10,7 +10,6 @@
 import Cocoa
 
 class NFXListCell_OSX: NSTableCellView {
-    
     @IBOutlet var statusView: NSView!
     @IBOutlet var requestTimeLabel: NSTextField!
     @IBOutlet var timeIntervalLabel: NSTextField!
@@ -36,6 +35,10 @@ class NFXListCell_OSX: NSTableCellView {
         methodLabel.font = NSFont.NFXFont(size: 12)
         typeLabel.font = NSFont.NFXFont(size: 12)
         
+    }
+    
+    static func nib() -> NSNib? {
+        NSNib(nibNamed: "NFXListCell_OSX", bundle: nil)
     }
         
     func isNew() {

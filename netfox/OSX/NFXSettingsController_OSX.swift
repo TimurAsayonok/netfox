@@ -24,10 +24,13 @@ class NFXSettingsController_OSX: NFXSettingsController, NSTableViewDataSource, N
         nfxVersionLabel.stringValue = nfxVersionString
         nfxURLButton.title = nfxURL
 
-        let interfaceItemIdentifier = NSUserInterfaceItemIdentifier(rawValue: cellIdentifier)
-        let nib = NSNib(nibNamed: interfaceItemIdentifier.rawValue, bundle: nil)
+        let nibName = cellIdentifier
 
-        responseTypesTableView.register(nib, forIdentifier: interfaceItemIdentifier)
+//        responseTypesTableView
+//            .register(
+//                NSNib(nibNamed: nibName, bundle: nil),
+//                forIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier)
+//            )
     }
     
     override func viewWillAppear() {

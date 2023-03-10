@@ -12,7 +12,8 @@ import Cocoa
 protocol NFXWindowControllerDelegate {
     func httpModelSelectedDidChange(model: NFXHTTPModel)
 }
-    
+
+
 class NFXWindowController: NSWindowController, NSWindowDelegate, NFXWindowControllerDelegate {
     
     @IBOutlet var settingsButton: NSButton!
@@ -72,14 +73,17 @@ class NFXWindowController: NSWindowController, NSWindowDelegate, NFXWindowContro
     // MARK: Actions
     
     @IBAction func settingsClicked(sender: AnyObject?) {
+        print("Settings")
         settingsPopover.show(relativeTo: NSZeroRect, of: settingsButton, preferredEdge: NSRectEdge.maxY)
     }
     
     @IBAction func infoClicked(sender: AnyObject?) {
+        print("infoClicked")
         infoPopover.show(relativeTo: NSZeroRect, of: infoButton, preferredEdge: NSRectEdge.maxY)
     }
     
     @IBAction func statisticsClicked(sender: AnyObject?) {
+        print("statisticsClicked")
         statisticsPopover.show(relativeTo: NSZeroRect, of: statisticsButton, preferredEdge: NSRectEdge.maxY)
     }
 

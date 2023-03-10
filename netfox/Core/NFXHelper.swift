@@ -309,7 +309,7 @@ class NFXDebugInfo {
         #endif
     }
     
-    class func getNFXIP(_ completion:@escaping (_ result: String) -> Void) {
+    class func getNFXIP(_ completion: @escaping (_ result: String) -> Void) {
         var req: NSMutableURLRequest
         req = NSMutableURLRequest(url: URL(string: "https://api.ipify.org/?format=json")!)
         URLProtocol.setProperty(true, forKey: NFXProtocol.nfxInternalKey, in: req)
@@ -317,11 +317,15 @@ class NFXDebugInfo {
         let session = URLSession.shared
         session.dataTask(with: req as URLRequest, completionHandler: { (data, response, error) in
             do {
-                let rawJsonData = try JSONSerialization.jsonObject(with: data!, options: [.allowFragments])
-                if let ipAddress = (rawJsonData as AnyObject).value(forKey: "ip") {
-                    completion(ipAddress as! String)
+                if let data = data {
+                    let rawJsonData = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
+                    if let ipAddress = (rawJsonData as AnyObject).value(forKey: "ip") {
+                        completion(ipAddress as! String)
+                    } else {
+                        completion("-")
+                    }
                 } else {
-                    completion("-")
+                    completion("no data")
                 }
             } catch {
                 completion("-")
