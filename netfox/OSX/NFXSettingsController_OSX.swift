@@ -10,7 +10,6 @@
 import Cocoa
     
 class NFXSettingsController_OSX: NFXSettingsController, NSTableViewDataSource, NSTableViewDelegate {
-    
     @IBOutlet var responseTypesTableView: NSTableView!
     @IBOutlet var nfxVersionLabel: NSTextField!
     @IBOutlet var nfxURLButton: NSButton!
@@ -25,10 +24,10 @@ class NFXSettingsController_OSX: NFXSettingsController, NSTableViewDataSource, N
         nfxVersionLabel.stringValue = nfxVersionString
         nfxURLButton.title = nfxURL
 
-        let nibName = cellIdentifier
+        let interfaceItemIdentifier = NSUserInterfaceItemIdentifier(rawValue: cellIdentifier)
+        let nib = NSNib(nibNamed: interfaceItemIdentifier.rawValue, bundle: nil)
 
-        responseTypesTableView.register(NSNib(nibNamed: nibName, bundle: nil),
-                                        forIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier))
+        responseTypesTableView.register(nib, forIdentifier: interfaceItemIdentifier)
     }
     
     override func viewWillAppear() {
@@ -68,11 +67,7 @@ class NFXSettingsController_OSX: NFXSettingsController, NSTableViewDataSource, N
     
     // MARK: Table View Delegate and DataSource
     
-//    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-//        return tableData.count
-//    }
-    
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return tableData.count
     }
     

@@ -41,11 +41,7 @@ class NFXListController_OSX: NFXListController, NSTableViewDelegate, NSTableView
     
     // MARK: UITableViewDataSource
     
-//    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-//        tableData.count
-//    }
-    
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         tableData.count
     }
     
